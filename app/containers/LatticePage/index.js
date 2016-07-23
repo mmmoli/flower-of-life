@@ -7,6 +7,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import Lattice from 'components/Lattice';
+
 
 import styles from './styles.css';
 
@@ -15,6 +17,7 @@ class LatticePage extends React.Component {
     return (
       <div className={ styles.latticePage }>
         <h1>Lattice</h1>
+        <Lattice l={ 5 } />
       </div>
     );
   }
