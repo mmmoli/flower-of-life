@@ -13,13 +13,13 @@ import 'sanitize.css/sanitize.css';
 
 import styles from './styles.css';
 
-const App = props => {
+function App(props) {
   return (
     <div className={styles.wrapper}>
       {props.children}
     </div>
   );
-};
+}
 
 App.propTypes = {
   children: React.PropTypes.node,

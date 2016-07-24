@@ -6,19 +6,27 @@
 
 import React from 'react';
 
-const Basis = ({
+function Basis({
   x,
   y,
-  r
-}) => {
+  r,
+}) {
   return (
-    <circle cx={ x }
-            cy={ y }
-            r={ r }
-            stroke='#666'
-            strokeWidth='1'
-            fill='transparent' />
+    <circle
+      cx={x}
+      cy={y}
+      r={r}
+      stroke="#666"
+      strokeWidth="1"
+      fill="transparent"
+    />
   );
+}
+
+Basis.propTypes = {
+  r: React.PropTypes.number,
+  x: React.PropTypes.number,
+  y: React.PropTypes.number,
 };
 
 export default Basis;

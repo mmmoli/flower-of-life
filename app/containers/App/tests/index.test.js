@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import React from 'react';
 
 import App from '../index';
-import Footer from 'components/Footer';
 
 describe('<App />', () => {
   it('should render the logo', () => {
@@ -21,12 +20,5 @@ describe('<App />', () => {
       </App>
     );
     expect(renderedComponent.contains(children)).toEqual(true);
-  });
-
-  it('should render the footer', () => {
-    const renderedComponent = shallow(
-      <App />
-    );
-    expect(renderedComponent.find(Footer).length).toEqual(1);
   });
 });

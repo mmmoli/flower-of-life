@@ -11,7 +11,7 @@ const loadModule = (cb) => (componentModule) => {
   cb(null, componentModule.default);
 };
 
-export default function createRoutes(store) {
+export default function createRoutes() {
   // create reusable async injectors using getHooks factory
   return [
     {
@@ -21,7 +21,7 @@ export default function createRoutes(store) {
         System.import('containers/LatticePage')
           .then(loadModule(cb))
           .catch(errorLoading);
-      }
+      },
     }, {
       path: '*',
       name: 'notfound',

@@ -1,25 +1,26 @@
-const plotColum = (i_offset, j_offset, l) => {
+const plotColum = (iOffset, jOffset, l) => {
   const result = [];
   let iteration = 0;
   while (iteration < l) {
-    result.push([i_offset, j_offset + iteration]);
+    result.push([iOffset, jOffset + iteration]);
     iteration++;
   }
+
   return result;
 };
 
-const plotRow = (i_offset, j_offset, l) => {
+const plotRow = (iOffset, jOffset, l) => {
   const result = [];
   let iteration = 0;
   while (iteration < l - 1) {
-    result.push([i_offset + iteration, j_offset]);
+    result.push([iOffset + iteration, jOffset]);
     iteration++;
   }
+
   return result;
 };
 
 const generate = l => {
-
   const result = [];
 
   let i = 0;
@@ -29,27 +30,25 @@ const generate = l => {
       result.push([i, j]);
       j++;
     }
+
     i++;
     j = 0;
   }
 
-  let offset_l = 0;
+  let lOffset = 0;
 
-  while (offset_l < l) {
-
+  while (lOffset < l) {
     // draw column
-    let i_offset_column = l + offset_l - 1;
-    let j_offset_column = offset_l;
-    result.push.apply(result, plotColum(i_offset_column, j_offset_column, l));
-
+    const iOffsetColumn = l + lOffset - 1;
+    const jOffsetColumn = lOffset;
+    result.push.apply(result, plotColum(iOffsetColumn, jOffsetColumn, l));
 
     // draw row
-    let i_offset_row = offset_l;
-    let j_offset_row = l + offset_l - 1;
-    result.push.apply(result, plotRow(i_offset_row, j_offset_row, l));
+    const iOffsetRow = lOffset;
+    const jOffsetRow = l + lOffset - 1;
+    result.push.apply(result, plotRow(iOffsetRow, jOffsetRow, l));
 
-
-    offset_l++;
+    lOffset++;
   }
 
   return result;
