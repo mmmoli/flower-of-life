@@ -21,22 +21,11 @@ body.fontLoaded {
 }
 
 .wrapper {
-  max-width: calc(768px + 16px * 2);
   margin: 0 auto;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  min-height: 100%;
-  padding: 0 16px;
-  flex-direction: column;
-}
-
-.logoWrapper {
-  padding: 2em 0;
-}
-
-.logo {
+  height: 100%;
   width: 100%;
-  margin: 0 auto;
-  display: block;
+  padding: 16px;
+  flex-direction: column;
+  position: absolute;
 }

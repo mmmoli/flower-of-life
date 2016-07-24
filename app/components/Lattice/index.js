@@ -9,8 +9,6 @@ import generate from '../../lib/lattice';
 import { a, b } from '../../lib/lattice/vectors';
 import Basis from '../Basis';
 
-import styles from './styles.css';
-
 const Lattice = ({
   r = 40,
   l = 3,
@@ -32,7 +30,6 @@ const Lattice = ({
       height={yMax}
       viewBox={`${-padding} ${-padding} ${xMax + 2 * padding} ${yMax + 2 * padding}`}
       preserveAspectRatio="xMidYMid meet"
-      className={styles.lattice}
     >
 
       {points.map(([i, j], key) => {
