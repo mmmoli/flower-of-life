@@ -20,15 +20,17 @@ const Lattice = ({
 
   const points = generate(l);
 
-  const xMax = a(2 * l - 2, r) + (2 * r) + 2;
+  const xMax = a(2 * l - 2, r) + (2 * r);
 
-  const yMax = l * r * 2;
+  const yMax = (l * r * 2);
+
+  const padding = 10;
 
   return (
     <svg
-      width={xMax}
+      width={yMax}
       height={yMax}
-      viewBox={`0 0 ${xMax} ${yMax}`}
+      viewBox={`${-padding} ${-padding} ${xMax + 2 * padding} ${yMax + 2 * padding}`}
       preserveAspectRatio="xMidYMid meet"
       className={styles.lattice}
     >

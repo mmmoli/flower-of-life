@@ -6,6 +6,8 @@
 
 import React from 'react';
 
+import styles from './styles.css';
+
 function Basis({
   x,
   y,
@@ -13,12 +15,10 @@ function Basis({
 }) {
   return (
     <circle
+      className={styles.basis}
       cx={x}
       cy={y}
       r={r}
-      stroke="#666"
-      strokeWidth="1"
-      fill="transparent"
     />
   );
 }

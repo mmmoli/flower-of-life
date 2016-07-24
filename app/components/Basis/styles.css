@@ -1,0 +1,23 @@
+@keyframes spin {
+  from {
+    transform:rotateY(0deg);
+  }
+  to {
+    transform:rotateY(359deg);
+  }
+}
+
+.basis {
+  stroke: #aaa;
+  stroke-width: 1;
+  fill: transparent;
+  transition: all 400ms;
+  animation: spin 30s infinite linear;
+  animation-direction: alternate;
+  transform-origin: 50% 0%;
+
+  &:hover {
+    stroke: white;
+    stroke-width: 2;
+  }
+}
